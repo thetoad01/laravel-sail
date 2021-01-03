@@ -3,6 +3,7 @@
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use App\Honeypot\Honeypot;
+use App\Http\Controllers\Covid19Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/covid19', [Covid19Controller::class, 'index'])->name('covid19.index');
+Route::get('/covid19/create', [Covid19Controller::class, 'create'])->name('covid19.create');
