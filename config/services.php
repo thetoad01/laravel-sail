@@ -30,4 +30,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'population' => [
+        'endpoint' => env('POPULATION_ENDPOINT'),
+        'key' => env('POPULATION_KEY'),
+        'host' => env('POPULATION_HOST'),
+    ],
+
 ];
